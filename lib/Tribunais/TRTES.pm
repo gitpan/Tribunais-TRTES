@@ -119,7 +119,7 @@ O resultado da sincronização é dado no formato JSON contendo todo o andamento
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 

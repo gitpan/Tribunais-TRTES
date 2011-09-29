@@ -1,7 +1,6 @@
 #!/usr/bin/perl -w
 use strict;
 use CGI;
-use lib "D:/wwwroot/web2.eti.br/Tribunais"; # linux - $ENV{DOCUMENT_ROOT} . "/Tribunais"
 use TRTES;
 
 my $q = new CGI;
