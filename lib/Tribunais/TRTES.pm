@@ -112,14 +112,14 @@ __END__
 
 Tribunais::TRTES - Interface de consulta processual no Tribunal Regional do Trabalho do Espírito Santo - Brasil.
 
-Este módulo tem como finalidade realizar, mediante número de processo, um consulta processual na
-base de dados do Tribunal Regional do Trabalho do Espírito Santo - TRTES.
+Este módulo tem como finalidade realizar uma consulta processual na base de dados do Tribunal Regional do Trabalho do
+Espírito Santo - TRTES
 
 O resultado da sincronização é dado no formato JSON contendo todo o andamento do processo, fase à fase.
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -127,6 +127,15 @@ version 0.002
 
     #cria objeto tribunal
     my $tribunal = new Tribunais::TRTES($tiponumeracao, $numero, $ano, $vara, $recurso, $digito);
+    
+    # onde:
+    #
+    # $tiponumeracao -> antiga ou unificada
+    # $digito -> dígito do processo
+    # $numero -> numeração sem o dígito e sem o -
+    # $ano -> 4 dígitos do ano da abertura do processo
+    # $vara -> vara de abertura do processo
+    # $recurso -> numero do recurso em julgamento
     
 
     # printa o resultado da sincronização no formato JSON
@@ -139,7 +148,7 @@ version 0.002
     
     $tribunal->sincroniza
 
-Realiza busca na base de dados do TJ e retorna um obj JSON contendo todo o andamento
+Realiza busca na base de dados do TRTES e retorna um obj JSON contendo todo o andamento
 
 =head1 RESPONSE FORMAT
 
